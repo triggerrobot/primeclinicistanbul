@@ -1,15 +1,17 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
+
 import { motion, useInView } from 'framer-motion'
 import Image from 'next/image'
 import { ChevronLeft, ChevronRight, GripVertical } from 'lucide-react'
+
 import { useLanguage } from '@/lib/i18n/language-context'
 
 const CASE_IMAGES = [
   {
-    before: 'https://images.unsplash.com/photo-1609919767027-4e144785c9e9?w=600&q=80&fit=crop',
-    after:  'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&q=80&fit=crop',
+    before: '/images/rin1-1.webp',
+    after:  '/images/rin1.webp',
     stats:  { duration: '3h', recovery: '10 days', satisfaction: '99%' }
   },
   {
@@ -38,6 +40,7 @@ function ComparisonSlider({ before, after, label, dragHint }: { before: string; 
     if (!containerRef.current) return
     const rect = containerRef.current.getBoundingClientRect()
     const pct = Math.max(5, Math.min(95, ((clientX - rect.left) / rect.width) * 100))
+
     setPosition(pct)
   }, [])
 
@@ -45,10 +48,12 @@ function ComparisonSlider({ before, after, label, dragHint }: { before: string; 
     const onMove  = (e: MouseEvent) => { if (isDragging) updatePosition(e.clientX) }
     const onTouch = (e: TouchEvent) => { if (isDragging && e.touches[0]) updatePosition(e.touches[0].clientX) }
     const onUp    = () => setIsDragging(false)
+
     window.addEventListener('mousemove', onMove)
     window.addEventListener('mouseup', onUp)
     window.addEventListener('touchmove', onTouch, { passive: true })
     window.addEventListener('touchend', onUp)
+
     return () => {
       window.removeEventListener('mousemove', onMove)
       window.removeEventListener('mouseup', onUp)

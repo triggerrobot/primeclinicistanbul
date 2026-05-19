@@ -103,7 +103,7 @@ export default function TreatmentPage() {
               transition={{ duration: 0.7, delay: 0.8 }}
               className='grid max-w-xl grid-cols-2 gap-4 sm:grid-cols-4'
             >
-              {meta.stats.map((s, i) => (
+              {card.stats.map((s, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, y: 10 }}
@@ -185,7 +185,7 @@ export default function TreatmentPage() {
             >
               <p className='mb-5 text-xs font-semibold uppercase tracking-wider text-white/35'>{t.treatments.quickFacts}</p>
               <div className='grid grid-cols-2 gap-5'>
-                {meta.stats.map((s, i) => (
+                {card.stats.map((s, i) => (
                   <div key={i}>
                     <div className='text-lg font-bold text-white ltr-only' style={{ fontFamily: headingFont }}>{s.value}</div>
                     <div className='text-[11px] text-white/35 uppercase tracking-wider'>{s.label}</div>

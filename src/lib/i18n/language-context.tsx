@@ -22,7 +22,19 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const saved = localStorage.getItem('prime-clinic-lang') as Language | null
-    if (saved && translations[saved]) setLanguageState(saved)
+    if (saved && translations[saved]) {
+      setLanguageState(saved)
+      return
+    }
+    const supported = Object.keys(translations) as Language[]
+    const browserLangs = navigator.languages?.length ? navigator.languages : [navigator.language]
+    for (const bl of browserLangs) {
+      const code = bl.split('-')[0].toLowerCase() as Language
+      if (supported.includes(code)) {
+        setLanguageState(code)
+        return
+      }
+    }
   }, [])
 
   const setLanguage = (lang: Language) => {

@@ -1,20 +1,22 @@
 'use client'
 
 import { useRef, useState } from 'react'
+
 import { motion, useInView } from 'framer-motion'
 import Image from 'next/image'
 import { Award, GraduationCap, Star, ChevronLeft, ChevronRight } from 'lucide-react'
+
 import { useLanguage } from '@/lib/i18n/language-context'
 
 const DOCTOR_META = [
   {
-    image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=500&q=80&fit=crop&crop=faces',
+    image: '/images/dr1.webp',
     rating: 4.9, cases: '2,400+',
     certifications: ['EBOPRAS', 'ISAPS Member', 'Turkish Board Certified'],
     accentColor: '#FFFFFF'
   },
   {
-    image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=500&q=80&fit=crop&crop=faces',
+    image: '/images/dr2.webp',
     rating: 4.8, cases: '3,800+',
     certifications: ['ISHRS Fellow', 'DHI Certified', 'FUE Specialist'],
     accentColor: '#D0D0D0'
@@ -26,31 +28,31 @@ const DOCTOR_META = [
     accentColor: '#B8B8B8'
   },
   {
-    image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=500&q=80&fit=crop&crop=faces',
+    image: '/images/dr3.webp',
     rating: 5.0, cases: '4,200+',
     certifications: ['EAO Member', 'IACD Fellow', 'Invisalign Certified'],
     accentColor: '#E0E0E0'
   },
   {
-    image: 'https://images.unsplash.com/photo-1651008376811-b90baee60c1f?w=400&h=500&q=80&fit=crop&crop=faces',
+    image: '/images/dr7.webp',
     rating: 4.8, cases: '1,500+',
     certifications: ['ESPRAS Member', 'ISAPS Fellow', 'Board Certified'],
     accentColor: '#C8C8C8'
   },
   {
-    image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=500&q=80&fit=crop&crop=faces',
+    image: '/images/dr6.webp',
     rating: 4.9, cases: '2,100+',
     certifications: ['ISAPS Member', 'ASAPS Fellow', 'Board Certified'],
     accentColor: '#A0A0A0'
   },
   {
-    image: 'https://images.unsplash.com/photo-1527613426441-4da17471b66d?w=400&h=500&q=80&fit=crop&crop=faces',
+    image: '/images/dr4.webp',
     rating: 5.0, cases: '3,100+',
     certifications: ['ISAPS Member', 'ASPS Fellow', 'Columbia Alumni'],
     accentColor: '#E8E8E8'
   },
   {
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&h=500&q=80&fit=crop&crop=faces',
+    image: '/images/pclogo.webp',
     rating: 4.7, cases: '1,200+',
     certifications: ['ISHRS Member', 'AAD Fellow', 'UCL Alumni'],
     accentColor: '#B0B0B0'
@@ -69,6 +71,7 @@ const onEnter = (el: HTMLDivElement, accent: string) => {
   el.style.borderColor = `${accent}38`
   el.style.boxShadow   = '0 30px 70px rgba(0,0,0,0.7)'
 }
+
 const onLeave = (el: HTMLDivElement) => {
   el.style.transform   = ''
   el.style.borderColor = 'rgba(255,255,255,0.08)'
@@ -95,14 +98,17 @@ export default function DoctorsSection() {
     scrollRef.current.style.scrollSnapType = 'none'
     setDragging(true)
   }
+
   const onMouseMove = (e: React.MouseEvent) => {
     if (!isDragging.current || !scrollRef.current) return
     e.preventDefault()
     scrollRef.current.scrollLeft = dragScrollLeft.current - (e.pageX - dragStartX.current) * 1.4
   }
+
   const onMouseUp = () => {
     isDragging.current = false
     setDragging(false)
+
     if (scrollRef.current) {
       setTimeout(() => {
         if (scrollRef.current) scrollRef.current.style.scrollSnapType = 'x mandatory'
@@ -194,7 +200,9 @@ export default function DoctorsSection() {
           >
             {t.doctors.doctors.map((doc, i) => {
               const meta = DOCTOR_META[i]
+
               if (!meta) return null
+
               return (
                 <div
                   key={i}

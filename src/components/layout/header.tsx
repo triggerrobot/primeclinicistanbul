@@ -1,10 +1,13 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Phone, ChevronDown } from 'lucide-react'
+
 import { useLanguage } from '@/lib/i18n/language-context'
 import { LANGUAGES, type Language } from '@/lib/i18n/translations'
 import { TREATMENT_META } from '@/lib/treatments'
@@ -32,7 +35,9 @@ export default function Header() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
+
     window.addEventListener('scroll', onScroll, { passive: true })
+
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
@@ -40,7 +45,9 @@ export default function Header() {
     const handleClick = (e: MouseEvent) => {
       if (langRef.current && !langRef.current.contains(e.target as Node)) setLangOpen(false)
     }
+
     document.addEventListener('mousedown', handleClick)
+
     return () => document.removeEventListener('mousedown', handleClick)
   }, [])
 
@@ -60,14 +67,17 @@ export default function Header() {
         <div className='mx-auto flex h-18 max-w-7xl items-center justify-between gap-4 px-6'>
           {/* Logo */}
           <Link href={isHome ? '#home' : '/'} className='group flex items-center gap-3'>
-            <div
-              className='flex size-9 items-center justify-center rounded-lg transition-transform duration-300 group-hover:scale-110'
-              style={{ background: '#ffffff' }}
-            >
-              <span className='text-xs font-black tracking-tight' style={{ color: '#050505' }}>PC</span>
+            <div className='relative size-9 overflow-hidden rounded-lg transition-transform duration-300 group-hover:scale-110'>
+              <Image
+                src='/images/pclogo.webp'
+                alt='Prime Clinic Istanbul'
+                fill
+                className='object-cover'
+                sizes='36px'
+              />
             </div>
             <div className='flex flex-col leading-none'>
-              <span className='text-sm font-bold tracking-wide text-white' style={{ fontFamily: 'var(--font-playfair-display)' }}>Prime Clinic</span>
+              <span className='text-sm font-bold tracking-wide text-white' style={{ fontFamily: 'var(--font-poppins)' }}>Prime Clinic</span>
               <span className='text-[9px] font-semibold uppercase tracking-[0.2em] text-white/40'>Istanbul</span>
             </div>
           </Link>
@@ -126,6 +136,7 @@ export default function Header() {
                     </div>
                     {TREATMENT_META.map(meta => {
                       const card = t.treatments.cards[meta.index]
+
                       return (
                         <Link
                           key={meta.slug}
@@ -279,6 +290,7 @@ export default function Header() {
                     >
                       {TREATMENT_META.map(meta => {
                         const card = t.treatments.cards[meta.index]
+
                         return (
                           <Link
                             key={meta.slug}

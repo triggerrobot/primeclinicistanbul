@@ -116,6 +116,12 @@ const en = {
         longDescription:
           'Our rhinoplasty specialists blend surgical precision with an artistic eye to create results that are harmonious with your facial anatomy. Using both open and closed techniques, we address cosmetic refinement, structural correction and breathing improvements in a single procedure. Every surgery is preceded by a detailed 3D simulation so you can visualise your outcome before a single incision is made.',
         features: ['Natural Results', 'Minimal Scarring', '7–14 Day Recovery'],
+        stats: [
+          { label: 'Recovery', value: '7–14 days' },
+          { label: 'Duration', value: '2–3 hrs' },
+          { label: 'Anaesthesia', value: 'General' },
+          { label: 'Stay', value: '5–7 nights' }
+        ],
       },
       {
         category: 'Hair Restoration',
@@ -126,6 +132,12 @@ const en = {
         longDescription:
           'Our hair restoration team uses the most advanced FUE and DHI techniques available, extracting and implanting grafts at the optimal angle and density to match your natural hair growth pattern. Sapphire blade micro-channels minimise trauma, while PRP therapy accelerates healing and maximises graft survival. The result is a hairline so natural it is indistinguishable from your original hair.',
         features: ['FUE & DHI Methods', 'Lifetime Results', '3–5 Day Recovery'],
+        stats: [
+          { label: 'Recovery', value: '3–5 days' },
+          { label: 'Duration', value: '6–8 hrs' },
+          { label: 'Grafts', value: 'Up to 5,000' },
+          { label: 'Stay', value: '3–4 nights' }
+        ],
       },
       {
         category: 'Body Contouring',
@@ -136,6 +148,12 @@ const en = {
         longDescription:
           'VASER ultrasonic-assisted liposuction allows our surgeons to sculpt the body with unrivalled precision, targeting stubborn fat deposits while preserving the surrounding tissue. The purified fat is then strategically transferred to the buttocks to create natural, lasting curves. A custom compression garment programme supports your result through every stage of recovery.',
         features: ['360° Sculpting', 'HD Liposuction', '10–14 Day Recovery'],
+        stats: [
+          { label: 'Recovery', value: '10–14 days' },
+          { label: 'Duration', value: '3–5 hrs' },
+          { label: 'Anaesthesia', value: 'General' },
+          { label: 'Stay', value: '6–8 nights' }
+        ],
       },
       {
         category: 'Dental Aesthetics',
@@ -146,6 +164,12 @@ const en = {
         longDescription:
           'Our prosthodontic specialists design your smile using advanced digital imaging and smile design software before any preparation begins. Ultra-thin E-Max porcelain veneers at 0.3 mm thickness preserve the maximum amount of natural tooth structure while delivering a luminous, perfectly symmetrical result. Same-day CEREC technology ensures implant cases can often be completed within a single visit.',
         features: ['E-Max Veneers', 'Same-Day Crowns', '5–7 Day Treatment'],
+        stats: [
+          { label: 'Treatment', value: '5–7 days' },
+          { label: 'Per session', value: '2–3 hrs' },
+          { label: 'Veneers', value: 'Up to 20' },
+          { label: 'Longevity', value: '15–20 yrs' }
+        ],
       },
       {
         category: 'Facial Rejuvenation',
@@ -156,6 +180,12 @@ const en = {
         longDescription:
           'The deep-plane facelift addresses the deeper structural layers of the face, providing more dramatic and longer-lasting results than traditional techniques — typically lasting 10 to 15 years. Blepharoplasty is carefully combined where needed, removing excess skin and repositioning fat pads to restore a rested, youthful appearance without an operated look. All work is performed under general anaesthesia in our JCI-accredited hospital.',
         features: ['Natural Lift', 'No Visible Scars', '10–14 Day Recovery'],
+        stats: [
+          { label: 'Recovery', value: '10–14 days' },
+          { label: 'Duration', value: '3–4 hrs' },
+          { label: 'Anaesthesia', value: 'General / Local' },
+          { label: 'Stay', value: '5–7 nights' }
+        ],
       },
       {
         category: 'Breast Aesthetics',
@@ -166,6 +196,12 @@ const en = {
         longDescription:
           'We offer the full spectrum of breast surgery — augmentation with premium Motiva or Mentor cohesive gel implants, reduction for improved comfort and posture, and mastopexy (lift) for reshaping without volume change. Dual-plane implant placement creates the most natural feel and profile, and every patient receives a personalised 3D simulation session before confirming their choice of size and shape.',
         features: ['Premium Implants', 'Custom Sizing', '7–10 Day Recovery'],
+        stats: [
+          { label: 'Recovery', value: '7–10 days' },
+          { label: 'Duration', value: '1.5–3 hrs' },
+          { label: 'Implants', value: 'Motiva / Mentor' },
+          { label: 'Stay', value: '4–6 nights' }
+        ],
       }
     ]
   },
@@ -215,16 +251,16 @@ const en = {
     cases: 'cases',
     doctors: [
       {
-        name: 'Dr. Mehmet Yılmaz',
-        specialty: 'Rhinoplasty & Facial Surgery',
-        experience: '18',
-        education: 'Istanbul University · Harvard Medical'
+        name: 'Dr. Ayşe Boğatır',
+        specialty: 'Zirconia, Laminates & All-on-4/6',
+        experience: '12',
+        education: 'Istanbul University · Vienna Dental'
       },
       {
-        name: 'Dr. Selin Arslan',
-        specialty: 'Hair Transplantation',
-        experience: '12',
-        education: 'Hacettepe University · Vienna AKH'
+        name: 'Dt. Furkan Erilli',
+        specialty: 'Dental Implants',
+        experience: '8',
+        education: 'Marmara University · Berlin Charité'
       },
       {
         name: 'Dr. Emre Kaya',
@@ -233,28 +269,28 @@ const en = {
         education: 'Ankara University · Johns Hopkins'
       },
       {
-        name: 'Dr. Zeynep Öztürk',
-        specialty: 'Dental Aesthetics & Implants',
-        experience: '14',
-        education: 'Marmara University · NYU Dentistry'
+        name: 'Dt. Mehmet Yiğit Özgür',
+        specialty: 'Root Canal, Cleaning & Whitening',
+        experience: '10',
+        education: 'Hacettepe University · London KCL'
       },
       {
-        name: 'Dr. Ayşe Demir',
-        specialty: 'Facelift & Eyelid Surgery',
-        experience: '11',
+        name: 'Dr. Ahmet Keleş',
+        specialty: 'Rhinoplasty',
+        experience: '15',
+        education: 'Istanbul University · Vienna AKH'
+      },
+      {
+        name: 'Dt. Büşra Çağırıcı',
+        specialty: 'Zirconia, Laminates & All-on-4/6',
+        experience: '7',
+        education: 'Ankara University · Madrid Complutense'
+      },
+      {
+        name: 'Dt. Etkin Can Uğurlu',
+        specialty: 'Fillings, Root Canal & Whitening',
+        experience: '9',
         education: 'Ege University · Paris APHP'
-      },
-      {
-        name: 'Dr. Can Öztürk',
-        specialty: 'Breast & Body Aesthetics',
-        experience: '13',
-        education: 'Gazi University · Rome Sapienza'
-      },
-      {
-        name: 'Dr. Leyla Şahin',
-        specialty: 'Reconstructive Surgery',
-        experience: '20',
-        education: 'Istanbul University · Columbia'
       },
       {
         name: 'Dr. Tarık Yıldız',
@@ -432,6 +468,12 @@ const tr: Translations = {
         longDescription:
           'Rinoplasti uzmanlarımız, yüz anatominizle uyumlu sonuçlar elde etmek için cerrahi hassasiyeti sanatsal bir bakış açısıyla birleştirir. Açık ve kapalı tekniklerin her ikisini de kullanarak estetik iyileştirme, yapısal düzeltme ve nefes alma sorunlarını tek bir operasyonda ele alıyoruz. Her cerrahiden önce ayrıntılı 3D simülasyon yapılır; böylece ilk kesiden önce sonucu görselleştirebilirsiniz.',
         features: ['Doğal Sonuçlar', 'Minimal İz', '7–14 Gün İyileşme'],
+        stats: [
+          { label: 'İyileşme', value: '7–14 gün' },
+          { label: 'Süre', value: '2–3 saat' },
+          { label: 'Anestezi', value: 'Genel' },
+          { label: 'Konaklama', value: '5–7 gece' }
+        ],
       },
       {
         category: 'Saç Restorasyonu',
@@ -442,6 +484,12 @@ const tr: Translations = {
         longDescription:
           'Saç restorasyonu ekibimiz, greftleri doğal saç büyüme düzeninizle eşleşecek optimal açı ve yoğunlukta nakletmek için mevcut en gelişmiş FUE ve DHI tekniklerini kullanır. Safir bıçak mikro-kanallar travmayı en aza indirirken PRP terapisi iyileşmeyi hızlandırır ve greft yaşama oranını maksimize eder. Sonuç, orijinal saçınızdan ayırt edilemeyecek kadar doğal bir saç çizgisidir.',
         features: ['FUE ve DHI Yöntemi', 'Ömür Boyu Sonuç', '3–5 Gün İyileşme'],
+        stats: [
+          { label: 'İyileşme', value: '3–5 gün' },
+          { label: 'Süre', value: '6–8 saat' },
+          { label: 'Greft', value: '5.000\'e kadar' },
+          { label: 'Konaklama', value: '3–4 gece' }
+        ],
       },
       {
         category: 'Vücut Şekillendirme',
@@ -452,6 +500,12 @@ const tr: Translations = {
         longDescription:
           'VASER ultrasonik destekli liposuction, cerrahlarımızın çevre dokuları korurken inatçı yağ depolarını hedef alarak vücudu eşsiz bir hassasiyetle şekillendirmesine olanak tanır. Arındırılan yağ, kalıcı ve doğal kıvrımlar oluşturmak için stratejik olarak kalçalara aktarılır. Özel baskı giysisi programı, iyileşmenin her aşamasında sonucunuzu destekler.',
         features: ['360° Şekillendirme', 'HD Liposuction', '10–14 Gün İyileşme'],
+        stats: [
+          { label: 'İyileşme', value: '10–14 gün' },
+          { label: 'Süre', value: '3–5 saat' },
+          { label: 'Anestezi', value: 'Genel' },
+          { label: 'Konaklama', value: '6–8 gece' }
+        ],
       },
       {
         category: 'Diş Estetiği',
@@ -462,6 +516,12 @@ const tr: Translations = {
         longDescription:
           'Protetik uzmanlarımız, herhangi bir hazırlık başlamadan önce gelişmiş dijital görüntüleme ve gülüş tasarım yazılımı kullanarak gülüşünüzü tasarlar. 0,3 mm kalınlığında ultra ince E-Max porselen veneerler, doğal diş yapısını maksimumda korurken parlak ve mükemmel simetrik bir sonuç sunar. CEREC teknolojisi, implant vakalarının çoğunlukla tek bir ziyarette tamamlanmasını sağlar.',
         features: ['E-Max Veneer', 'Aynı Gün Kron', '5–7 Günlük Tedavi'],
+        stats: [
+          { label: 'Tedavi', value: '5–7 gün' },
+          { label: 'Seans başına', value: '2–3 saat' },
+          { label: 'Veneer', value: '20\'ye kadar' },
+          { label: 'Ömür', value: '15–20 yıl' }
+        ],
       },
       {
         category: 'Yüz Gençleştirme',
@@ -472,6 +532,12 @@ const tr: Translations = {
         longDescription:
           'Derin düzlem yüz germe, yüzün daha derin yapısal katmanlarını ele alarak geleneksel tekniklere kıyasla daha dramatik ve uzun süreli sonuçlar sağlar — genellikle 10 ila 15 yıl sürer. Blefaroplasti, fazla cildin uzaklaştırılması ve yağ pedlerinin yeniden konumlandırılması için gereken durumlarda özenle birleştirilir; böylece operasyon görünümü olmaksızın dinlenmiş, genç bir görünüm elde edilir.',
         features: ['Doğal Asma', 'Görünmez İz', '10–14 Gün İyileşme'],
+        stats: [
+          { label: 'İyileşme', value: '10–14 gün' },
+          { label: 'Süre', value: '3–4 saat' },
+          { label: 'Anestezi', value: 'Genel / Lokal' },
+          { label: 'Konaklama', value: '5–7 gece' }
+        ],
       },
       {
         category: 'Meme Estetiği',
@@ -482,6 +548,12 @@ const tr: Translations = {
         longDescription:
           'Premium Motiva veya Mentor kohesif jel implantlarla büyütme, konfor ve duruş iyileştirme için küçültme ve hacim değişikliği olmaksızın şekillendirme için mastopexi dahil meme cerrahisinin tüm yelpazesini sunuyoruz. Çift düzlem implant yerleşimi en doğal his ve profili sağlar; her hasta boyut ve şekil tercihini onaylamadan önce kişiselleştirilmiş 3D simülasyon seansı alır.',
         features: ['Premium İmplantlar', 'Özel Boyutlandırma', '7–10 Gün İyileşme'],
+        stats: [
+          { label: 'İyileşme', value: '7–10 gün' },
+          { label: 'Süre', value: '1,5–3 saat' },
+          { label: 'İmplant', value: 'Motiva / Mentor' },
+          { label: 'Konaklama', value: '4–6 gece' }
+        ],
       }
     ]
   },
@@ -531,16 +603,16 @@ const tr: Translations = {
     cases: 'vaka',
     doctors: [
       {
-        name: 'Dr. Mehmet Yılmaz',
-        specialty: 'Rinoplasti ve Yüz Cerrahisi',
-        experience: '18',
-        education: 'İstanbul Üniversitesi · Harvard Tıp'
+        name: 'Dr. Ayşe Boğatır',
+        specialty: 'Zirkonyum, Lamine, All-on-4, All-on-6',
+        experience: '12',
+        education: 'İstanbul Üniversitesi · Viyana Diş'
       },
       {
-        name: 'Dr. Selin Arslan',
-        specialty: 'Saç Ekimi Uzmanı',
-        experience: '12',
-        education: 'Hacettepe Üniversitesi · Viyana AKH'
+        name: 'Dt. Furkan Erilli',
+        specialty: 'İmplant Tedavileri',
+        experience: '8',
+        education: 'Marmara Üniversitesi · Berlin Charité'
       },
       {
         name: 'Dr. Emre Kaya',
@@ -549,28 +621,28 @@ const tr: Translations = {
         education: 'Ankara Üniversitesi · Johns Hopkins'
       },
       {
-        name: 'Dr. Zeynep Öztürk',
-        specialty: 'Diş Estetiği ve İmplant',
-        experience: '14',
-        education: 'Marmara Üniversitesi · NYU Dişçilik'
+        name: 'Dt. Mehmet Yiğit Özgür',
+        specialty: 'Kanal Tedavisi, Diş Temizliği, Diş Beyazlatma',
+        experience: '10',
+        education: 'Hacettepe Üniversitesi · Londra KCL'
       },
       {
-        name: 'Dr. Ayşe Demir',
-        specialty: 'Yüz Germe ve Göz Kapağı',
-        experience: '11',
+        name: 'Dr. Ahmet Keleş',
+        specialty: 'Rinoplasti',
+        experience: '15',
+        education: 'İstanbul Üniversitesi · Viyana AKH'
+      },
+      {
+        name: 'Dt. Büşra Çağırıcı',
+        specialty: 'Zirkonyum, Lamine, All-on-4, All-on-6',
+        experience: '7',
+        education: 'Ankara Üniversitesi · Madrid Complutense'
+      },
+      {
+        name: 'Dt. Etkin Can Uğurlu',
+        specialty: 'Dolgu, Kanal Tedavisi, Diş Temizliği, Diş Beyazlatma',
+        experience: '9',
         education: 'Ege Üniversitesi · Paris APHP'
-      },
-      {
-        name: 'Dr. Can Öztürk',
-        specialty: 'Meme ve Vücut Estetiği',
-        experience: '13',
-        education: 'Gazi Üniversitesi · Roma Sapienza'
-      },
-      {
-        name: 'Dr. Leyla Şahin',
-        specialty: 'Rekonstrüktif Cerrahi',
-        experience: '20',
-        education: 'İstanbul Üniversitesi · Columbia'
       },
       {
         name: 'Dr. Tarık Yıldız',
@@ -748,6 +820,12 @@ const ru: Translations = {
         longDescription:
           'Наши специалисты по ринопластике сочетают хирургическую точность с художественным взглядом, создавая результаты, гармонирующие с анатомией вашего лица. Используя как открытую, так и закрытую технику, мы решаем задачи эстетики, структурной коррекции и улучшения дыхания в рамках одной операции. Каждому вмешательству предшествует детальная 3D-симуляция, позволяющая увидеть результат ещё до разреза.',
         features: ['Естественный результат', 'Минимум следов', 'Восстановление 7–14 дней'],
+        stats: [
+          { label: 'Восстановление', value: '7–14 дней' },
+          { label: 'Длительность', value: '2–3 ч' },
+          { label: 'Анестезия', value: 'Общая' },
+          { label: 'Проживание', value: '5–7 ночей' }
+        ],
       },
       {
         category: 'Восстановление волос',
@@ -758,6 +836,12 @@ const ru: Translations = {
         longDescription:
           'Наша команда по восстановлению волос применяет наиболее передовые техники FUE и DHI, пересаживая графты под оптимальным углом и плотностью в соответствии с естественным ростом ваших волос. Микроканалы сапфировым лезвием минимизируют травму, а PRP-терапия ускоряет заживление и максимизирует выживаемость графтов. Результат — линия роста волос, неотличимая от оригинальной.',
         features: ['Методы FUE и DHI', 'Пожизненный результат', 'Восстановление 3–5 дней'],
+        stats: [
+          { label: 'Восстановление', value: '3–5 дней' },
+          { label: 'Длительность', value: '6–8 ч' },
+          { label: 'Графты', value: 'до 5 000' },
+          { label: 'Проживание', value: '3–4 ночи' }
+        ],
       },
       {
         category: 'Коррекция тела',
@@ -768,6 +852,12 @@ const ru: Translations = {
         longDescription:
           'Ультразвуковая липосакция VASER позволяет нашим хирургам с непревзойдённой точностью скульптурировать тело, воздействуя на упрямые жировые отложения при сохранении окружающих тканей. Очищенный жир стратегически переносится на ягодицы для создания естественных, долговечных форм. Программа компрессионных изделий поддерживает результат на каждом этапе восстановления.',
         features: ['Скульптурирование 360°', 'HD-липосакция', 'Восстановление 10–14 дней'],
+        stats: [
+          { label: 'Восстановление', value: '10–14 дней' },
+          { label: 'Длительность', value: '3–5 ч' },
+          { label: 'Анестезия', value: 'Общая' },
+          { label: 'Проживание', value: '6–8 ночей' }
+        ],
       },
       {
         category: 'Эстетика зубов',
@@ -778,6 +868,12 @@ const ru: Translations = {
         longDescription:
           'Наши специалисты по протезированию разрабатывают вашу улыбку с помощью передового цифрового моделирования до начала любой подготовки. Ультратонкие виниры E-Max толщиной 0,3 мм сохраняют максимальный объём естественной зубной ткани, обеспечивая сияющий, идеально симметричный результат. Технология CEREC позволяет завершить имплантацию за одно посещение.',
         features: ['Виниры E-Max', 'Коронки за 1 день', 'Лечение 5–7 дней'],
+        stats: [
+          { label: 'Лечение', value: '5–7 дней' },
+          { label: 'За сеанс', value: '2–3 ч' },
+          { label: 'Виниры', value: 'до 20' },
+          { label: 'Долговечность', value: '15–20 лет' }
+        ],
       },
       {
         category: 'Омоложение лица',
@@ -788,6 +884,12 @@ const ru: Translations = {
         longDescription:
           'Глубокий лифтинг воздействует на более глубокие структурные слои лица, обеспечивая более выраженные и долговременные результаты по сравнению с традиционными техниками — как правило, от 10 до 15 лет. Блефаропластика деликатно совмещается при необходимости: убирается избыток кожи и перемещаются жировые пакеты для восстановления отдохнувшего, молодого вида без искусственности.',
         features: ['Естественный лифтинг', 'Незаметные следы', 'Восстановление 10–14 дней'],
+        stats: [
+          { label: 'Восстановление', value: '10–14 дней' },
+          { label: 'Длительность', value: '3–4 ч' },
+          { label: 'Анестезия', value: 'Общая / Местная' },
+          { label: 'Проживание', value: '5–7 ночей' }
+        ],
       },
       {
         category: 'Эстетика груди',
@@ -798,6 +900,12 @@ const ru: Translations = {
         longDescription:
           'Мы предлагаем полный спектр операций на груди: увеличение с премиальными имплантами Motiva или Mentor, уменьшение для улучшения комфорта и осанки, а также мастопексию для изменения формы без изменения объёма. Двухплоскостная установка имплантов обеспечивает наиболее естественный вид и ощущение, а каждый пациент проходит 3D-симуляцию до подтверждения выбора.',
         features: ['Премиальные импланты', 'Индивидуальный размер', 'Восстановление 7–10 дней'],
+        stats: [
+          { label: 'Восстановление', value: '7–10 дней' },
+          { label: 'Длительность', value: '1,5–3 ч' },
+          { label: 'Импланты', value: 'Motiva / Mentor' },
+          { label: 'Проживание', value: '4–6 ночей' }
+        ],
       }
     ]
   },
@@ -847,16 +955,16 @@ const ru: Translations = {
     cases: 'случаев',
     doctors: [
       {
-        name: 'Д-р Мехмет Йылмаз',
-        specialty: 'Ринопластика и хирургия лица',
-        experience: '18',
-        education: 'Стамбульский университет · Гарвардская медицина'
+        name: 'Д-р Айше Богатыр',
+        specialty: 'Циркониевые коронки, ламинаты, All-on-4/6',
+        experience: '12',
+        education: 'Стамбульский университет · Венская стоматология'
       },
       {
-        name: 'Д-р Селин Арслан',
-        specialty: 'Трансплантация волос',
-        experience: '12',
-        education: 'Университет Хасеттепе · Венская AKH'
+        name: 'Д-р Фуркан Эрилли',
+        specialty: 'Зубные импланты',
+        experience: '8',
+        education: 'Мраморный университет · Берлин Шарите'
       },
       {
         name: 'Д-р Эмре Кайя',
@@ -865,28 +973,28 @@ const ru: Translations = {
         education: 'Анкарский университет · Джонс Хопкинс'
       },
       {
-        name: 'Д-р Зейнеп Озтюрк',
-        specialty: 'Стоматологическая эстетика и импланты',
-        experience: '14',
-        education: 'Мраморный университет · NYU Стоматология'
+        name: 'Д-р Мехмет Йиит Озгюр',
+        specialty: 'Лечение каналов, чистка и отбеливание',
+        experience: '10',
+        education: 'Университет Хасеттепе · Лондон KCL'
       },
       {
-        name: 'Д-р Айше Демир',
-        specialty: 'Лифтинг лица и коррекция век',
-        experience: '11',
+        name: 'Д-р Ахмет Келеш',
+        specialty: 'Ринопластика',
+        experience: '15',
+        education: 'Стамбульский университет · Венская AKH'
+      },
+      {
+        name: 'Д-р Бюшра Чаирыджи',
+        specialty: 'Циркониевые коронки, ламинаты, All-on-4/6',
+        experience: '7',
+        education: 'Анкарский университет · Мадрид Комплутенсе'
+      },
+      {
+        name: 'Д-р Эткин Джан Угурлу',
+        specialty: 'Пломбирование, лечение каналов, чистка и отбеливание',
+        experience: '9',
         education: 'Университет Эге · Парижская APHP'
-      },
-      {
-        name: 'Д-р Джан Озтюрк',
-        specialty: 'Эстетика груди и тела',
-        experience: '13',
-        education: 'Университет Гази · Рим Сапиенца'
-      },
-      {
-        name: 'Д-р Лейла Шахин',
-        specialty: 'Реконструктивная хирургия',
-        experience: '20',
-        education: 'Стамбульский университет · Колумбия'
       },
       {
         name: 'Д-р Тарык Йылдыз',
@@ -1064,6 +1172,12 @@ const ar: Translations = {
         longDescription:
           'يجمع متخصصو تجميل الأنف لدينا بين الدقة الجراحية والنظرة الفنية لتحقيق نتائج تنسجم مع تشريح وجهك. باستخدام تقنيتي التجميل المفتوح والمغلق، نعالج التحسين الجمالي والتصحيح البنيوي وتحسين التنفس في إجراء واحد. يسبق كل جراحة محاكاة ثلاثية الأبعاد مفصّلة لتتمكن من تصور نتيجتك قبل إجراء أول شق.',
         features: ['نتائج طبيعية', 'ندوب دقيقة', 'تعافٍ 7–14 يومًا'],
+        stats: [
+          { label: 'التعافي', value: '7–14 يومًا' },
+          { label: 'المدة', value: '2–3 ساعات' },
+          { label: 'التخدير', value: 'عام' },
+          { label: 'الإقامة', value: '5–7 ليالٍ' }
+        ],
       },
       {
         category: 'زراعة الشعر',
@@ -1074,6 +1188,12 @@ const ar: Translations = {
         longDescription:
           'يستخدم فريق ترميم الشعر لدينا أحدث تقنيات FUE وDHI المتاحة، ويزرع الطعوم بالزاوية والكثافة المثلى لتتناسب مع نمط نمو شعرك الطبيعي. تقلل القنوات الدقيقة بشفرة الياقوت من الصدمة، بينما يسرّع علاج PRP الشفاء ويزيد من نسبة نجاة الطعوم. والنتيجة خط شعر طبيعي لا يمكن تمييزه عن شعرك الأصلي.',
         features: ['طريقتا FUE و DHI', 'نتائج مدى الحياة', 'تعافٍ 3–5 أيام'],
+        stats: [
+          { label: 'التعافي', value: '3–5 أيام' },
+          { label: 'المدة', value: '6–8 ساعات' },
+          { label: 'الطعوم', value: 'حتى 5,000' },
+          { label: 'الإقامة', value: '3–4 ليالٍ' }
+        ],
       },
       {
         category: 'نحت الجسم',
@@ -1163,16 +1283,16 @@ const ar: Translations = {
     cases: 'حالة',
     doctors: [
       {
-        name: 'د. محمت يلماظ',
-        specialty: 'تجميل الأنف وجراحة الوجه',
-        experience: '18',
-        education: 'جامعة إسطنبول · طب هارفارد'
+        name: 'د. آيشه بوغاتير',
+        specialty: 'زركونيا، لامينيت، All-on-4، All-on-6',
+        experience: '12',
+        education: 'جامعة إسطنبول · طب أسنان فيينا'
       },
       {
-        name: 'د. سيلين أرسلان',
-        specialty: 'تخصص زراعة الشعر',
-        experience: '12',
-        education: 'جامعة هاجيتيبي · مستشفى AKH فيينا'
+        name: 'ط. فوركان إريللي',
+        specialty: 'زراعة الأسنان',
+        experience: '8',
+        education: 'جامعة مرمرة · برلين شاريتيه'
       },
       {
         name: 'د. إمري كايا',
@@ -1181,28 +1301,28 @@ const ar: Translations = {
         education: 'جامعة أنقرة · جونز هوبكينز'
       },
       {
-        name: 'د. زينب أوزتورك',
-        specialty: 'تجميل الأسنان والزراعة',
-        experience: '14',
-        education: 'جامعة مرمرة · طب أسنان NYU'
+        name: 'ط. محمت يغيت أوزغور',
+        specialty: 'علاج جذور الأسنان وتنظيف وتبييض الأسنان',
+        experience: '10',
+        education: 'جامعة هاجيتيبي · لندن KCL'
       },
       {
-        name: 'د. عائشة دمير',
-        specialty: 'شد الوجه وجراحة الجفون',
-        experience: '11',
+        name: 'د. أحمد كيليش',
+        specialty: 'تجميل الأنف',
+        experience: '15',
+        education: 'جامعة إسطنبول · AKH فيينا'
+      },
+      {
+        name: 'ط. بشرى جاغيرجي',
+        specialty: 'زركونيا، لامينيت، All-on-4، All-on-6',
+        experience: '7',
+        education: 'جامعة أنقرة · مدريد كومبلوتنسه'
+      },
+      {
+        name: 'ط. إتكين جان أوغورلو',
+        specialty: 'حشوات وعلاج الجذور والتنظيف والتبييض',
+        experience: '9',
         education: 'جامعة إيجه · APHP باريس'
-      },
-      {
-        name: 'د. جان أوزتورك',
-        specialty: 'تجميل الصدر والجسم',
-        experience: '13',
-        education: 'جامعة غازي · روما سابيينتسا'
-      },
-      {
-        name: 'د. ليلى شاهين',
-        specialty: 'الجراحة التجميلية الترميمية',
-        experience: '20',
-        education: 'جامعة إسطنبول · كولومبيا'
       },
       {
         name: 'د. طارق يلدز',

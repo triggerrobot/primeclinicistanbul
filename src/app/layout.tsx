@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 
 import { Geist_Mono, Poppins, Cairo } from 'next/font/google'
 import type { Metadata } from 'next'
+import Script from 'next/script'
 
 import { ThemeProvider } from '@/components/theme-provider'
 
@@ -93,6 +94,18 @@ const RootLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
       suppressHydrationWarning
     >
       <body className='flex min-h-full w-full flex-auto flex-col'>
+        <Script
+          src='https://www.googletagmanager.com/gtag/js?id=G-BLEWF4K2SJ'
+          strategy='afterInteractive'
+        />
+        <Script id='google-analytics' strategy='afterInteractive'>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-BLEWF4K2SJ');
+          `}
+        </Script>
         <ThemeProvider attribute='class' enableSystem={false} disableTransitionOnChange>
           {children}
         </ThemeProvider>
