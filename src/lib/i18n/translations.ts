@@ -17,7 +17,7 @@ const en = {
     results: 'Results',
     doctors: 'Doctors',
     cta: 'Free Consultation',
-    phone: '+90 212 000 00 00'
+    phone: '+90 535 915 6434'
   },
   hero: {
     badge: 'Premium Health Tourism · Istanbul, Turkey',
@@ -309,10 +309,10 @@ const en = {
     form: {
       name: 'Full Name',
       namePlaceholder: 'John Doe',
-      email: 'Email Address',
-      emailPlaceholder: 'john@example.com',
-      phone: 'Phone / WhatsApp',
-      phonePlaceholder: '+1 (555) 000 0000',
+      birthYear: 'Age / Year of Birth',
+      birthYearPlaceholder: 'e.g. 1985',
+      travelDate: 'Preferred Travel Date',
+      travelDatePlaceholder: 'e.g. June 2026',
       country: 'Country of Residence',
       countryPlaceholder: 'United Kingdom',
       treatment: 'Desired Treatment',
@@ -323,9 +323,9 @@ const en = {
       privacy:
         'Your information is 100% confidential and used solely to prepare your personalized treatment proposal. We never share patient data.',
       submit: 'Send VIP Request',
-      successTitle: 'Request Received!',
+      successTitle: 'Redirecting to WhatsApp!',
       successMessage:
-        'Your personal patient coordinator will contact you within 2 hours with a customized treatment plan.',
+        'Your request has been sent to WhatsApp. Our team will reply within 2 hours.',
       successRetry: 'Submit another request'
     },
     treatments: [
@@ -341,7 +341,6 @@ const en = {
       'Other / General Inquiry'
     ],
     infoPhone: { label: 'Phone / WhatsApp', sub: 'Available 24/7' },
-    infoEmail: { label: 'Email', sub: 'Reply within 2 hours' },
     infoLocation: { label: 'Location', sub: 'Near Şişli / Mecidiyeköy' },
     languagesTitle: 'We Speak Your Language',
     responseValue: '< 2 hours',
@@ -369,7 +368,7 @@ const tr: Translations = {
     results: 'Sonuçlar',
     doctors: 'Doktorlar',
     cta: 'Ücretsiz Danışma',
-    phone: '+90 212 000 00 00'
+    phone: '+90 535 915 6434'
   },
   hero: {
     badge: 'Premium Sağlık Turizmi · İstanbul, Türkiye',
@@ -661,10 +660,10 @@ const tr: Translations = {
     form: {
       name: 'Ad Soyad',
       namePlaceholder: 'Ahmet Yılmaz',
-      email: 'E-posta Adresi',
-      emailPlaceholder: 'ahmet@ornek.com',
-      phone: 'Telefon / WhatsApp',
-      phonePlaceholder: '+90 (5xx) xxx xx xx',
+      birthYear: 'Yaş / Doğum Yılı',
+      birthYearPlaceholder: 'örn. 1985',
+      travelDate: 'Tercih Edilen Seyahat Tarihi',
+      travelDatePlaceholder: 'örn. Haziran 2026',
       country: 'İkamet Ülkesi',
       countryPlaceholder: 'Almanya',
       treatment: 'İstenen Tedavi',
@@ -675,9 +674,9 @@ const tr: Translations = {
       privacy:
         'Bilgileriniz %100 gizli tutulur ve yalnızca kişiselleştirilmiş tedavi teklifinizi hazırlamak için kullanılır. Hasta verilerini asla paylaşmıyoruz.',
       submit: 'VIP Talebini Gönder',
-      successTitle: 'Talebiniz Alındı!',
+      successTitle: 'WhatsApp\'a Yönlendiriliyorsunuz!',
       successMessage:
-        'Kişisel hasta koordinatörünüz 2 saat içinde özel tedavi planınızla sizinle iletişime geçecek.',
+        'Talebiniz WhatsApp\'a iletildi. Ekibimiz en kısa sürede size dönecek.',
       successRetry: 'Yeni talep gönder'
     },
     treatments: [
@@ -693,7 +692,6 @@ const tr: Translations = {
       'Diğer / Genel Bilgi'
     ],
     infoPhone: { label: 'Telefon / WhatsApp', sub: '7/24 Hizmetinizdeyiz' },
-    infoEmail: { label: 'E-posta', sub: '2 saat içinde yanıt' },
     infoLocation: { label: 'Konum', sub: 'Şişli / Mecidiyeköy yakını' },
     languagesTitle: 'Dilinizde Hizmet Veriyoruz',
     responseValue: '< 2 saat',
@@ -721,7 +719,7 @@ const ru: Translations = {
     results: 'Результаты',
     doctors: 'Врачи',
     cta: 'Бесплатная консультация',
-    phone: '+90 212 000 00 00'
+    phone: '+90 535 915 6434'
   },
   hero: {
     badge: 'Премиальный медицинский туризм · Стамбул, Турция',
@@ -1013,10 +1011,10 @@ const ru: Translations = {
     form: {
       name: 'Полное имя',
       namePlaceholder: 'Иван Иванов',
-      email: 'Адрес электронной почты',
-      emailPlaceholder: 'ivan@example.com',
-      phone: 'Телефон / WhatsApp',
-      phonePlaceholder: '+7 (xxx) xxx xx xx',
+      birthYear: 'Возраст / Год рождения',
+      birthYearPlaceholder: 'напр. 1985',
+      travelDate: 'Предпочтительная дата поездки',
+      travelDatePlaceholder: 'напр. июнь 2026',
       country: 'Страна проживания',
       countryPlaceholder: 'Россия',
       treatment: 'Желаемая процедура',
@@ -1027,9 +1025,9 @@ const ru: Translations = {
       privacy:
         'Ваши данные полностью конфиденциальны и используются исключительно для подготовки персонального предложения по лечению. Мы никогда не передаём данные пациентов.',
       submit: 'Отправить VIP-запрос',
-      successTitle: 'Запрос получен!',
+      successTitle: 'Переход в WhatsApp!',
       successMessage:
-        'Ваш личный координатор по работе с пациентами свяжется с вами в течение 2 часов с индивидуальным планом лечения.',
+        'Ваш запрос отправлен в WhatsApp. Наша команда ответит в течение 2 часов.',
       successRetry: 'Отправить ещё один запрос'
     },
     treatments: [
@@ -1045,7 +1043,6 @@ const ru: Translations = {
       'Другое / Общий вопрос'
     ],
     infoPhone: { label: 'Телефон / WhatsApp', sub: 'Доступно 24/7' },
-    infoEmail: { label: 'Электронная почта', sub: 'Ответ в течение 2 часов' },
     infoLocation: { label: 'Расположение', sub: 'Рядом с Шишли / Меджидиекёй' },
     languagesTitle: 'Мы говорим на вашем языке',
     responseValue: '< 2 часов',
@@ -1073,7 +1070,7 @@ const ar: Translations = {
     results: 'النتائج',
     doctors: 'الأطباء',
     cta: 'استشارة مجانية',
-    phone: '+90 212 000 00 00'
+    phone: '+90 535 915 6434'
   },
   hero: {
     badge: 'السياحة الطبية الفاخرة · إسطنبول، تركيا',
@@ -1204,6 +1201,12 @@ const ar: Translations = {
         longDescription:
           'يتيح شفط الدهون بمساعدة الموجات فوق الصوتية VASER لجراحينا نحت الجسم بدقة لا مثيل لها، مع استهداف ترسبات الدهون العنيدة والحفاظ على الأنسجة المحيطة. ثم يُنقل الدهن المُنقى بشكل استراتيجي لإنشاء منحنيات طبيعية دائمة. يدعم برنامج الملابس الضاغطة المخصصة نتيجتك في كل مرحلة من مراحل التعافي.',
         features: ['نحت 360°', 'شفط HD', 'تعافٍ 10–14 يومًا'],
+        stats: [
+          { label: 'التعافي', value: '10–14 يومًا' },
+          { label: 'المدة', value: '3–5 ساعات' },
+          { label: 'التخدير', value: 'عام' },
+          { label: 'الإقامة', value: '6–8 ليالٍ' }
+        ],
       },
       {
         category: 'تجميل الأسنان',
@@ -1214,6 +1217,12 @@ const ar: Translations = {
         longDescription:
           'يصمم أخصائيو التعويضات الأسنانية لدينا ابتسامتك باستخدام برنامج تصوير رقمي متقدم وتصميم الابتسامة قبل البدء بأي تحضير. تحافظ قشور E-Max الخزفية فائقة الرقة بسماكة 0.3 ملم على أقصى قدر من بنية الأسنان الطبيعية مع تحقيق نتيجة مضيئة ومتماثلة تمامًا. وتتيح تقنية CEREC إتمام حالات الزراعة في زيارة واحدة في أغلب الأحيان.',
         features: ['قشور E-Max', 'تيجان في يوم واحد', 'علاج 5–7 أيام'],
+        stats: [
+          { label: 'العلاج', value: '5–7 أيام' },
+          { label: 'لكل جلسة', value: '2–3 ساعات' },
+          { label: 'القشور', value: 'حتى 20' },
+          { label: 'المتانة', value: '15–20 سنة' }
+        ],
       },
       {
         category: 'تجديد الوجه',
@@ -1224,6 +1233,12 @@ const ar: Translations = {
         longDescription:
           'يعالج شد الوجه العميق الطبقات الهيكلية الأعمق للوجه، ما يُعطي نتائج أكثر وضوحًا وأطول أمدًا من التقنيات التقليدية وتمتد عادةً من 10 إلى 15 عامًا. تُدمج جراحة الجفون بعناية عند الحاجة لإزالة الجلد الزائد وإعادة تموضع وسائد الدهون لاستعادة مظهر مرتاح وشبابي دون مظهر مجري عليه عملية.',
         features: ['رفع طبيعي', 'بدون ندوب ظاهرة', 'تعافٍ 10–14 يومًا'],
+        stats: [
+          { label: 'التعافي', value: '10–14 يومًا' },
+          { label: 'المدة', value: '3–4 ساعات' },
+          { label: 'التخدير', value: 'عام / موضعي' },
+          { label: 'الإقامة', value: '5–7 ليالٍ' }
+        ],
       },
       {
         category: 'تجميل الصدر',
@@ -1234,6 +1249,12 @@ const ar: Translations = {
         longDescription:
           'نُقدّم الطيف الكامل لجراحة الثدي: التكبير بغرسات Motiva أو Mentor المتميزة، والتصغير لتحسين الراحة والقوام، والمستوبكسي لإعادة التشكيل دون تغيير الحجم. يُوفّر وضع الغرسة ثنائية المستوى أكثر ملمس وملمح طبيعيين، ويحصل كل مريض على جلسة محاكاة ثلاثية الأبعاد مخصصة قبل تأكيد اختيار الحجم والشكل.',
         features: ['غرسات فاخرة', 'مقاسات مخصصة', 'تعافٍ 7–10 أيام'],
+        stats: [
+          { label: 'التعافي', value: '7–10 أيام' },
+          { label: 'المدة', value: '1.5–3 ساعات' },
+          { label: 'الغرسات', value: 'Motiva / Mentor' },
+          { label: 'الإقامة', value: '4–6 ليالٍ' }
+        ],
       }
     ]
   },
@@ -1341,10 +1362,10 @@ const ar: Translations = {
     form: {
       name: 'الاسم الكامل',
       namePlaceholder: 'محمد العلي',
-      email: 'البريد الإلكتروني',
-      emailPlaceholder: 'mohammed@example.com',
-      phone: 'الهاتف / واتساب',
-      phonePlaceholder: '+966 5xx xxx xxxx',
+      birthYear: 'العمر / سنة الميلاد',
+      birthYearPlaceholder: 'مثلاً 1985',
+      travelDate: 'تاريخ السفر المفضل',
+      travelDatePlaceholder: 'مثلاً يونيو 2026',
       country: 'بلد الإقامة',
       countryPlaceholder: 'المملكة العربية السعودية',
       treatment: 'العلاج المطلوب',
@@ -1355,9 +1376,9 @@ const ar: Translations = {
       privacy:
         'معلوماتك سرية بالكامل وتُستخدم فقط لإعداد عرض العلاج الشخصي الخاص بك. لا نشارك بيانات المرضى مطلقًا.',
       submit: 'إرسال طلب VIP',
-      successTitle: 'تم استلام طلبك!',
+      successTitle: 'جارٍ التوجيه إلى واتساب!',
       successMessage:
-        'سيتواصل معك منسقك الشخصي خلال ساعتين بخطة علاج مخصصة.',
+        'تم إرسال طلبك عبر واتساب. سيرد فريقنا في أقرب وقت ممكن.',
       successRetry: 'إرسال طلب آخر'
     },
     treatments: [
@@ -1373,7 +1394,6 @@ const ar: Translations = {
       'أخرى / استفسار عام'
     ],
     infoPhone: { label: 'الهاتف / واتساب', sub: 'متاح 24/7' },
-    infoEmail: { label: 'البريد الإلكتروني', sub: 'رد خلال ساعتين' },
     infoLocation: { label: 'الموقع', sub: 'بالقرب من شيشلي / مجيدية كوي' },
     languagesTitle: 'نتحدث لغتك',
     responseValue: '< ساعتان',

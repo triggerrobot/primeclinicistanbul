@@ -15,18 +15,18 @@ const CASE_IMAGES = [
     stats:  { duration: '3h', recovery: '10 days', satisfaction: '99%' }
   },
   {
-    before: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80&fit=crop',
-    after:  'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=600&q=80&fit=crop',
+    before: '/images/sek1-1.webp',
+    after:  '/images/sek1.webp',
     stats:  { duration: '6h', recovery: '5 days', satisfaction: '97%' }
   },
   {
-    before: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&q=80&fit=crop',
-    after:  'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80&fit=crop',
+    before: '/images/d1.webp',
+    after:  '/images/d1-1.webp',
     stats:  { duration: '5 days', recovery: '1 day', satisfaction: '100%' }
   },
   {
-    before: 'https://images.unsplash.com/photo-1516914943479-89db7d9ae7f2?w=600&q=80&fit=crop',
-    after:  'https://images.unsplash.com/photo-1550617931-e17a7b70dce2?w=600&q=80&fit=crop',
+    before: '/images/lp1.webp',
+    after:  '/images/lp1-1.webp',
     stats:  { duration: '4h', recovery: '14 days', satisfaction: '98%' }
   }
 ]

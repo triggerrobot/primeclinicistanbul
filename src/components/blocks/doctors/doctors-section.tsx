@@ -52,7 +52,7 @@ const DOCTOR_META = [
     accentColor: '#E8E8E8'
   },
   {
-    image: '/images/pclogo.webp',
+    image: '/images/dr8.webp',
     rating: 4.7, cases: '1,200+',
     certifications: ['ISHRS Member', 'AAD Fellow', 'UCL Alumni'],
     accentColor: '#B0B0B0'

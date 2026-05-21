@@ -2,12 +2,14 @@
 
 import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { Phone, Mail, MapPin, MessageSquare, Send, CheckCircle, ChevronDown } from 'lucide-react'
+import { Phone, MapPin, MessageSquare, Send, CheckCircle, ChevronDown } from 'lucide-react'
 import { useLanguage } from '@/lib/i18n/language-context'
 
-const CONTACT_ICONS  = [Phone, Mail, MapPin]
-const CONTACT_HREFS  = ['tel:+902120000000', 'mailto:info@primeclinicistanbul.com', '#']
-const CONTACT_VALUES = ['+90 (212) 000 00 00', 'info@primeclinicistanbul.com', 'Nişantaşı, Istanbul']
+const WA_PRIMARY     = 'https://wa.me/905359156434'
+const WA_SECONDARY   = 'https://wa.me/905359150018'
+const CONTACT_ICONS  = [Phone, MapPin]
+const CONTACT_HREFS  = [WA_PRIMARY, '#']
+const CONTACT_VALUES = ['+90 535 915 6434  ·  0018', 'Nişantaşı, Istanbul']
 const LANGUAGES_LIST = ['🇬🇧 English', '🇩🇪 German', '🇫🇷 French', '🇸🇦 Arabic', '🇷🇺 Russian', '🇹🇷 Turkish']
 
 type FormState = 'idle' | 'loading' | 'success'
@@ -23,7 +25,7 @@ export default function ContactSection() {
   const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: true, margin: '-80px' })
   const [formState, setFormState] = useState<FormState>('idle')
-  const [form, setForm] = useState({ name: '', email: '', phone: '', country: '', treatment: '', message: '' })
+  const [form, setForm] = useState({ name: '', birthYear: '', travelDate: '', country: '', treatment: '', message: '' })
   const headingFont = language === 'ar' ? 'var(--font-cairo)' : 'var(--font-playfair-display)'
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
@@ -32,14 +34,26 @@ export default function ContactSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setFormState('loading')
-    await new Promise(r => setTimeout(r, 1500))
+
+    const lines = [
+      `*Prime Clinic Istanbul*`,
+      ``,
+      `${t.contact.form.name}: ${form.name}`,
+      form.birthYear  ? `${t.contact.form.birthYear}: ${form.birthYear}`   : '',
+      form.travelDate ? `${t.contact.form.travelDate}: ${form.travelDate}` : '',
+      form.country    ? `${t.contact.form.country}: ${form.country}`       : '',
+      form.treatment ? `${t.contact.form.treatment}: ${form.treatment}` : '',
+      form.message   ? `${t.contact.form.message}:\n${form.message}`    : ''
+    ].filter(Boolean).join('\n')
+
+    await new Promise(r => setTimeout(r, 600))
+    window.open(`https://wa.me/905359156434?text=${encodeURIComponent(lines)}`, '_blank')
     setFormState('success')
   }
 
   const contactInfo = [
     { ...t.contact.infoPhone,    value: CONTACT_VALUES[0], href: CONTACT_HREFS[0], Icon: CONTACT_ICONS[0] },
-    { ...t.contact.infoEmail,    value: CONTACT_VALUES[1], href: CONTACT_HREFS[1], Icon: CONTACT_ICONS[1] },
-    { ...t.contact.infoLocation, value: CONTACT_VALUES[2], href: CONTACT_HREFS[2], Icon: CONTACT_ICONS[2] }
+    { ...t.contact.infoLocation, value: CONTACT_VALUES[1], href: CONTACT_HREFS[1], Icon: CONTACT_ICONS[1] }
   ]
 
   return (
@@ -94,23 +108,16 @@ export default function ContactSection() {
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className='flex flex-col gap-5'>
-                <div className='grid gap-5 sm:grid-cols-2'>
-                  {[
-                    { name: 'name',  label: t.contact.form.name,  type: 'text',  placeholder: t.contact.form.namePlaceholder },
-                    { name: 'email', label: t.contact.form.email, type: 'email', placeholder: t.contact.form.emailPlaceholder }
-                  ].map(f => (
-                    <div key={f.name} className='flex flex-col gap-2'>
-                      <label className='text-xs font-semibold uppercase tracking-wider text-white/40'>{f.label} *</label>
-                      <input name={f.name} type={f.type} value={form[f.name as keyof typeof form]} onChange={handleChange} required placeholder={f.placeholder}
-                        className='rounded-xl px-4 py-3 text-sm text-white outline-none transition-all duration-300 focus:ring-1 focus:ring-white/20'
-                        style={INPUT_STYLE} />
-                    </div>
-                  ))}
+                <div className='flex flex-col gap-2'>
+                  <label className='text-xs font-semibold uppercase tracking-wider text-white/40'>{t.contact.form.name} *</label>
+                  <input name='name' type='text' value={form.name} onChange={handleChange} required placeholder={t.contact.form.namePlaceholder}
+                    className='rounded-xl px-4 py-3 text-sm text-white outline-none transition-all duration-300 focus:ring-1 focus:ring-white/20'
+                    style={INPUT_STYLE} />
                 </div>
                 <div className='grid gap-5 sm:grid-cols-2'>
                   {[
-                    { name: 'phone',   label: t.contact.form.phone,   type: 'tel',  placeholder: t.contact.form.phonePlaceholder },
-                    { name: 'country', label: t.contact.form.country, type: 'text', placeholder: t.contact.form.countryPlaceholder }
+                    { name: 'birthYear',  label: t.contact.form.birthYear,  type: 'text', placeholder: t.contact.form.birthYearPlaceholder },
+                    { name: 'travelDate', label: t.contact.form.travelDate, type: 'text', placeholder: t.contact.form.travelDatePlaceholder }
                   ].map(f => (
                     <div key={f.name} className='flex flex-col gap-2'>
                       <label className='text-xs font-semibold uppercase tracking-wider text-white/40'>{f.label}</label>
@@ -119,6 +126,12 @@ export default function ContactSection() {
                         style={INPUT_STYLE} />
                     </div>
                   ))}
+                </div>
+                <div className='flex flex-col gap-2'>
+                  <label className='text-xs font-semibold uppercase tracking-wider text-white/40'>{t.contact.form.country}</label>
+                  <input name='country' type='text' value={form.country} onChange={handleChange} placeholder={t.contact.form.countryPlaceholder}
+                    className='rounded-xl px-4 py-3 text-sm text-white outline-none transition-all duration-300 focus:ring-1 focus:ring-white/20'
+                    style={INPUT_STYLE} />
                 </div>
 
                 <div className='flex flex-col gap-2'>
@@ -189,6 +202,30 @@ export default function ContactSection() {
                 </div>
               </a>
             ))}
+
+            {/* WhatsApp CTA */}
+            <div className='grid grid-cols-2 gap-3'>
+              <a
+                href={WA_PRIMARY}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='flex items-center justify-center gap-2 rounded-2xl py-3.5 text-xs font-bold uppercase tracking-wider text-white transition-all duration-300 hover:scale-[1.03]'
+                style={{ background: 'rgba(37,211,102,0.15)', border: '1px solid rgba(37,211,102,0.35)', color: '#25D366' }}
+              >
+                <MessageSquare size={14} />
+                535 915 6434
+              </a>
+              <a
+                href={WA_SECONDARY}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='flex items-center justify-center gap-2 rounded-2xl py-3.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 hover:scale-[1.03]'
+                style={{ background: 'rgba(37,211,102,0.15)', border: '1px solid rgba(37,211,102,0.35)', color: '#25D366' }}
+              >
+                <MessageSquare size={14} />
+                535 915 0018
+              </a>
+            </div>
 
             <div className='rounded-2xl p-5' style={{ background: 'rgba(15,15,15,0.8)', border: '1px solid rgba(255,255,255,0.08)', backdropFilter: 'blur(8px)' }}>
               <p className='mb-3 text-xs font-semibold uppercase tracking-wider text-white/40'>{t.contact.languagesTitle}</p>
